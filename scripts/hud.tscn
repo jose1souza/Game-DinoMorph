@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://blxjkm3q83tno"]
+
+[ext_resource type="Texture2D" uid="uid://dauf8y4rskt0l" path="res://assets/flatDark24.png" id="1_qkv7d"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_swcmu"]
+[ext_resource type="Texture2D" uid="uid://kxbi8nhxy4sl" path="res://assets/flatDark23.png" id="2_cfedv"]
+[ext_resource type="Texture2D" uid="uid://br43e0j00u3os" path="res://assets/flatDark25.png" id="3_j7n82"]
+[ext_resource type="Texture2D" uid="uid://beuoid4yjqu1g" path="res://assets/flatDark48.png" id="4_amcrl"]
+[ext_resource type="Texture2D" uid="uid://dt7tg8w1jv0eo" path="res://assets/flatDark32.png" id="5_sa2tm"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 11.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+script = ExtResource("1_swcmu")
+
+[node name="direito" type="TouchScreenButton" parent="."]
+position = Vector2(120, 556)
+texture_normal = ExtResource("1_qkv7d")
+action = "ui_right"
+
+[node name="esquerdo" type="TouchScreenButton" parent="."]
+position = Vector2(6, 556)
+texture_normal = ExtResource("2_cfedv")
+action = "ui_left"
+
+[node name="pulo" type="TouchScreenButton" parent="."]
+position = Vector2(1025, 558)
+texture_normal = ExtResource("3_j7n82")
+action = "ui_up"
+
+[node name="tiro" type="TouchScreenButton" parent="."]
+position = Vector2(902, 555)
+texture_normal = ExtResource("4_amcrl")
+action = "ui_attack"
+
+[node name="menu" type="TouchScreenButton" parent="."]
+position = Vector2(1079, 10)
+scale = Vector2(1.24167, 1.27083)
+texture_normal = ExtResource("5_sa2tm")
+action = "ui_left"

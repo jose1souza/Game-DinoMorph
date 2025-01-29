@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://celc77tqsgoa3"]
+
+[ext_resource type="Texture2D" uid="uid://dptd3r8o68ltt" path="res://assets/Play@4x.png" id="2_5k41i"]
+[ext_resource type="Script" path="res://playbutton.gd" id="2_ytixt"]
+[ext_resource type="Texture2D" uid="uid://gcc5cj54p15l" path="res://assets/Player@4x.png" id="4_axs4h"]
+[ext_resource type="Script" path="res://playfase2.gd" id="5_1gitw"]
+[ext_resource type="Texture2D" uid="uid://5hgymijxc5ls" path="res://assets/BlueSkySkybox.png" id="5_b82bi"]
+[ext_resource type="Texture2D" uid="uid://cn1cvevt35rsw" path="res://assets/D7F77HJ894CRF9515ZKDHTFEN0-removebg-preview.png" id="6_6yb32"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -7.0
+offset_right = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button0" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.441
+anchor_top = 0.57
+anchor_right = 0.527
+anchor_bottom = 0.702
+offset_left = -420.032
+offset_top = -20.36
+offset_right = -292.104
+offset_bottom = 33.104
+action_mode = 0
+script = ExtResource("2_ytixt")
+
+[node name="Fundobotao" type="Sprite2D" parent="Button0"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(114, 70)
+scale = Vector2(0.747381, 0.694241)
+texture = ExtResource("2_5k41i")
+
+[node name="Button1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.441
+anchor_top = 0.57
+anchor_right = 0.527
+anchor_bottom = 0.702
+offset_left = 315.968
+offset_top = -20.36
+offset_right = 424.896
+offset_bottom = 37.104
+action_mode = 0
+script = ExtResource("5_1gitw")
+
+[node name="Fundobotao" type="Sprite2D" parent="Button1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(104, 71)
+scale = Vector2(0.683302, 0.702624)
+texture = ExtResource("4_axs4h")
+
+[node name="BlueSkySkybox" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(620, 522)
+scale = Vector2(1.59375, 1.59479)
+texture = ExtResource("5_b82bi")
+
+[node name="D7f77hj894crf9515zkdhtfen0-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(559, 130)
+texture = ExtResource("6_6yb32")
+
+[connection signal="pressed" from="Button0" to="Button0" method="_on_pressed"]
+[connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]

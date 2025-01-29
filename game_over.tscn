@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://boyqw1lcs2iqt"]
+
+[ext_resource type="Texture2D" uid="uid://dlevcjuf25byq" path="res://assets/SunsetSky.png" id="1_5ulte"]
+[ext_resource type="Script" path="res://scripts/backtomenu.gd" id="2_5135o"]
+[ext_resource type="Texture2D" uid="uid://bvdih50doec3j" path="res://assets/Repeat-Right@4x.png" id="3_qlq2n"]
+[ext_resource type="Texture2D" uid="uid://ccvb12c11et38" path="res://assets/4KJ25Z4MH9FN8KPH2N37RGZP00-removebg-preview.png" id="4_kfd27"]
+
+[node name="game_over" type="Node2D"]
+
+[node name="SunsetSky" type="Sprite2D" parent="."]
+position = Vector2(491, 149)
+texture = ExtResource("1_5ulte")
+
+[node name="Button1" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.441
+anchor_top = 0.57
+anchor_right = 0.527
+anchor_bottom = 0.702
+offset_left = 465.0
+offset_top = 517.0
+offset_right = 668.0
+offset_bottom = 642.0
+action_mode = 0
+script = ExtResource("2_5135o")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Button1"]
+position = Vector2(101, 64.5)
+scale = Vector2(0.657807, 0.622549)
+texture = ExtResource("3_qlq2n")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 378.0
+offset_top = 398.0
+offset_right = 754.0
+offset_bottom = 473.0
+text = "Fim de jogo!
+
+Tentar novamente?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="4kj25z4mh9fn8kph2n37rgzp00-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(573, 184)
+scale = Vector2(0.784, 0.73)
+texture = ExtResource("4_kfd27")
+
+[connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0hymd7rmdmp1"]
+
+[ext_resource type="Texture2D" uid="uid://dbouxpruogxas" path="res://assets/GreenSky.png" id="1_hfqrh"]
+[ext_resource type="Texture2D" uid="uid://bey27xtw1j0t5" path="res://assets/HB0TQYXYTMYJC4VRRCVFQMAJ30-removebg-preview.png" id="2_8dlms"]
+[ext_resource type="Script" path="res://playfase2.gd" id="3_ge350"]
+[ext_resource type="Script" path="res://labelvitoria.gd" id="3_vcxso"]
+[ext_resource type="Texture2D" uid="uid://gcc5cj54p15l" path="res://assets/Player@4x.png" id="4_jlaqn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i22m7"]
+font_size = 30
+
+[node name="vitoria" type="Node2D"]
+
+[node name="GreenSky" type="Sprite2D" parent="."]
+position = Vector2(597, 340)
+texture = ExtResource("1_hfqrh")
+
+[node name="Hb0tqyxytmyjc4vrrcvfqmaj30-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(566, 143)
+scale = Vector2(0.683, 0.71)
+texture = ExtResource("2_8dlms")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 329.0
+offset_right = 1150.0
+offset_bottom = 396.0
+text = "Parabéns!"
+label_settings = SubResource("LabelSettings_i22m7")
+script = ExtResource("3_vcxso")
+
+[node name="Button1" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.441
+anchor_top = 0.57
+anchor_right = 0.527
+anchor_bottom = 0.702
+offset_left = 466.0
+offset_top = 494.0
+offset_right = 670.0
+offset_bottom = 646.0
+action_mode = 0
+script = ExtResource("3_ge350")
+
+[node name="Fundobotao" type="Sprite2D" parent="Button1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(102, 73)
+scale = Vector2(0.683302, 0.702624)
+texture = ExtResource("4_jlaqn")
+
+[connection signal="pressed" from="Button1" to="Button1" method="_on_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp3jhykdlfeuv"]
+
+[ext_resource type="Script" path="res://hud/vidas_label.gd" id="1_8h077"]
+[ext_resource type="Script" path="res://hud/star_label.gd" id="2_0klyf"]
+[ext_resource type="Texture2D" uid="uid://dvc25g2wo3kcu" path="res://assets/SolidArrow-Right@4x.png" id="3_rejpw"]
+[ext_resource type="Texture2D" uid="uid://cu7estcxgcpnw" path="res://assets/SolidArrow-Left@4x.png" id="4_i0aah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ao234"]
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asuu7"]
+size = Vector2(200, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ug64m"]
+size = Vector2(200, 200)
+
+[node name="HUD_fase3" type="CanvasLayer"]
+
+[node name="Control_fase3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container_fase3" type="MarginContainer" parent="Control_fase3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Container_fase3" type="HBoxContainer" parent="Control_fase3/Container_fase3"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="vidas_fase3" type="Label" parent="Control_fase3/Container_fase3/Container_fase3"]
+layout_mode = 2
+text = "Vidas:"
+horizontal_alignment = 1
+script = ExtResource("1_8h077")
+
+[node name="Star_label_fase3" type="Label" parent="Control_fase3/Container_fase3/Container_fase3"]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+text = "Estrelas: "
+horizontal_alignment = 1
+script = ExtResource("2_0klyf")
+
+[node name="pular" type="TouchScreenButton" parent="Control_fase3/Container_fase3/Container_fase3"]
+modulate = Color(1, 1, 1, 0.486275)
+position = Vector2(978.51, 621.49)
+rotation = 4.71239
+scale = Vector2(0.620208, 0.620109)
+texture_normal = ExtResource("3_rejpw")
+shape = SubResource("RectangleShape2D_ao234")
+action = "ui_jump"
+visibility_mode = 1
+
+[node name="MovEsq" type="TouchScreenButton" parent="Control_fase3/Container_fase3/Container_fase3"]
+modulate = Color(1, 1, 1, 0.486275)
+position = Vector2(6, 487)
+scale = Vector2(0.673171, 0.653659)
+texture_normal = ExtResource("4_i0aah")
+shape = SubResource("RectangleShape2D_asuu7")
+action = "ui_movl"
+visibility_mode = 1
+
+[node name="MovDir" type="TouchScreenButton" parent="Control_fase3/Container_fase3/Container_fase3"]
+modulate = Color(1, 1, 1, 0.486275)
+position = Vector2(207, 485)
+scale = Vector2(0.736585, 0.663415)
+texture_normal = ExtResource("3_rejpw")
+shape = SubResource("RectangleShape2D_ug64m")
+action = "ui_movr"
+visibility_mode = 1

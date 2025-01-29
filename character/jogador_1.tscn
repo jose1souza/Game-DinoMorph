@@ -1,0 +1,170 @@
+[gd_scene load_steps=22 format=3 uid="uid://0owmfgsddejn"]
+
+[ext_resource type="Script" path="res://levels/jogador_1.gd" id="1_qwo6x"]
+[ext_resource type="Texture2D" uid="uid://lmqii7q5fa8b" path="res://dinoCharactersVersion1.1/sheets/DinoSprites - vita.png" id="3_ryxav"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eje7"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjaha"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jddd"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbmcw"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oflux"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys1a3"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1m1fp"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(336, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8382"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(360, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cw2u"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(384, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ds4at"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yflvx"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qivv6"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc0dd"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf816"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e27ke"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcbg5"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(288, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x1ee"]
+atlas = ExtResource("3_ryxav")
+region = Rect2(312, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qfgp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eje7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjaha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jddd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbmcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oflux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys1a3")
+}],
+"loop": true,
+"name": &"correndo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1m1fp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8382")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cw2u")
+}],
+"loop": true,
+"name": &"dano",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ds4at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yflvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qivv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc0dd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf816")
+}],
+"loop": true,
+"name": &"parado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e27ke")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_hcbg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x1ee")
+}],
+"loop": true,
+"name": &"pulando",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hskk4"]
+size = Vector2(10, 19)
+
+[node name="dino_verde" type="CharacterBody2D" groups=["jogador"]]
+position = Vector2(338, 209)
+script = ExtResource("1_qwo6x")
+metadata/_edit_group_ = true
+
+[node name="animacao1" type="AnimatedSprite2D" parent="." groups=["jogador"]]
+position = Vector2(-118.25, -44.5)
+scale = Vector2(1.07813, 1.28125)
+sprite_frames = SubResource("SpriteFrames_6qfgp")
+animation = &"pulando"
+autoplay = "correndo"
+frame_progress = 0.477967
+
+[node name="Colisao1" type="CollisionShape2D" parent="."]
+position = Vector2(-120, -43.5)
+shape = SubResource("RectangleShape2D_hskk4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.75, 1.75)
+limit_left = -5

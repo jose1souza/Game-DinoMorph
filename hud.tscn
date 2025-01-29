@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbrnh2dydv3d8"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_2fxhg"]
+[ext_resource type="PackedScene" uid="uid://c4d4b0n3wjb1g" path="res://levels/label.tscn" id="1_vdmss"]
+[ext_resource type="Script" path="res://levels/labelestrelas.gd" id="2_2vwar"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fxhg")
+
+[node name="Container" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Container_Estrelas" type="HBoxContainer" parent="Control/Container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="star_label" parent="Control/Container/Container_Estrelas" instance=ExtResource("1_vdmss")]
+layout_mode = 2
+text = "0/3 Estrelas"
+script = ExtResource("2_2vwar")
+
+[node name="vidas_label" type="Label" parent="Control/Container/Container_Estrelas"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+text = "Vidas 3"
+horizontal_alignment = 2
